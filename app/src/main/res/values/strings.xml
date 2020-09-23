@@ -1,17 +1,11 @@
 <resources>
     <string name="app_name">Shalom Bible</string>
-    <string name="english">English</string>
-    <string name="telugu">Telugu</string>
     <string name="book_name">Book Name</string>
-    <string name="book_name1">Select Book Name</string>
     <string name="chapter">Chapter</string>
     <string name="verse">Verse</string>
-    <string name="todo">TODO</string>
     <string name="bible">Bible</string>
-    <string name="share">Share</string>
     <string name="t0do">TODO</string>
-    <string name="add_bookmark">Add Bookmark</string>
-    <string name="bookmarks">BookMarks</string>
+    <string name="bookmarks">Bookmarks</string>
     <string name="done">Done</string>
     <string name="settings">Change Language</string>
     <string name="miracles_of_jesus">Miracles of Jesus</string>
@@ -19,19 +13,6 @@
     <string name="mark">Mark</string>
     <string name="luke">Luke</string>
     <string name="john">John</string>
-
-    <string-array name="Mobile_OS">
-        <item>Bengali</item>
-        <item>English</item>
-        <item>Gujarati</item>
-        <item>Hindi</item>
-        <item>Kannada</item>
-        <item>Malayalam</item>
-        <item>Oriya</item>
-        <item>Punjabi</item>
-        <item>Tamil</item>
-        <item>Telugu</item>
-    </string-array>
 
     <string-array name="languages">
         <item>বাংলা (Bengali)</item>
@@ -54,6 +35,11 @@
 
     <string name="admob_app_id">ca-app-pub-9177567683511459~1868728090</string>
     <string name="banner_home_footer">ca-app-pub-9177567683511459/4428172749</string>
+    <string name="select_your_language">Select Your Language</string>
 
 
+    <string name="no_favorites_items">No BookMarks</string>
+    <string name="no_favorites_msg">Add Bookmarks for Quick Reference.</string>
+    <string name="_01">01</string>
+    <string name="textview">TextView</string>
 </resources>

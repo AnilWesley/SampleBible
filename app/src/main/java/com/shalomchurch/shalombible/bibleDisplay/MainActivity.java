@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     int[] listviewImage = new int[]{
-            R.drawable.ic_note_add_black_24dp, R.drawable.ic_share_black_24dp, R.drawable.ic_cancel_black_24dp,
+            R.drawable.ic_baseline_note_add_24, R.drawable.ic_baseline_share_24, R.drawable.ic_baseline_cancel_24,
     };
 
 

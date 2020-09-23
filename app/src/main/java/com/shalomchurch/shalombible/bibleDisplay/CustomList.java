@@ -1,5 +1,6 @@
 package com.shalomchurch.shalombible.bibleDisplay;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.DataSetObserver;
 import android.graphics.Typeface;
@@ -70,7 +71,7 @@ public class CustomList implements ListAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
 
         LayoutInflater layoutInflater= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View listviewitem=layoutInflater.inflate(R.layout.card_view,null,true);
+        @SuppressLint("ViewHolder") View listviewitem=layoutInflater.inflate(R.layout.card_view,null,true);
         textView=(TextView)listviewitem.findViewById(R.id.textView);
         textView2=(TextView)listviewitem.findViewById(R.id.textView2);
         Typeface font = Typeface.createFromAsset(context.getAssets(),

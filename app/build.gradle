@@ -15,8 +15,8 @@ android {
         applicationId "com.shalomchurch.shalombible"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 3
-        versionName "2.2"
+        versionCode 4
+        versionName "3.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     buildTypes {

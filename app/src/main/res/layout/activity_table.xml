@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,73 +7,68 @@
     android:orientation="vertical"
     android:padding="10dp">
 
-            <LinearLayout
-                android:id="@+id/liner"
-                android:orientation="horizontal"
-                android:weightSum="4"
-                android:layout_margin="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
 
-                <TextView
-                    android:text="@string/matthew"
-                    android:layout_weight="1"
-                    android:textSize="19sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorPrimary"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/matthew"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
 
-                <TextView
-                    android:text="@string/mark"
-                    android:layout_weight="1"
-                    android:textStyle="bold"
-                    android:textSize="19sp"
-                    android:textColor="@color/colorPrimary"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/mark"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
 
-                <TextView
-                    android:text="@string/luke"
-                    android:layout_weight="1"
-                    android:textStyle="bold"
-                    android:textSize="19sp"
-                    android:textColor="@color/colorPrimary"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/luke"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
 
-                <TextView
-                    android:text="@string/john"
-                    android:layout_weight="1"
-                    android:textStyle="bold"
-                    android:textSize="19sp"
-                    android:textColor="@color/colorPrimary"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/john"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
 
-            </LinearLayout>
+    </LinearLayout>
 
     <ListView
+        android:id="@+id/miraclelist"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-
         android:layout_weight="1"
-        android:divider="@color/colorPrimary"
-        android:dividerHeight="1dp"
-        android:id="@+id/miraclelist">
+        android:divider="@color/background"
+        android:dividerHeight="1dp">
 
     </ListView>
+
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_home_footer"/>
+        ads:adUnitId="@string/banner_home_footer" />
 
 </LinearLayout>
 

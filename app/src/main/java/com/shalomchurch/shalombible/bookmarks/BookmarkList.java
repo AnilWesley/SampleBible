@@ -22,13 +22,17 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.shalomchurch.shalombible.R;
 import com.shalomchurch.shalombible.SharedPreference2;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 public class BookmarkList extends AppCompatActivity {
     String sam;
@@ -43,7 +47,7 @@ public class BookmarkList extends AppCompatActivity {
 
 
     int[] listviewImage = new int[]{
-            R.drawable.ic_note_add_black_24dp, R.drawable.ic_share_black_24dp, R.drawable.ic_cancel_black_24dp,
+            R.drawable.ic_baseline_note_add_24, R.drawable.ic_baseline_share_24, R.drawable.ic_baseline_cancel_24,
     };
     AlertDialog dialog;
     int pos;
@@ -52,11 +56,58 @@ public class BookmarkList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
-        MobileAds.initialize(this, getString(R.string.admob_app_id));
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setContentView(R.layout.activity_bookmark);
+
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setTitle("Bookmarks");
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+            }
+
+            @Override
+            public void onAdFailedToLoad(LoadAdError adError) {
+                // Code to be executed when an ad request fails.
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+            }
+
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                // Code to be executed when the user has left the app.
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+            }
+        });
+
+
+
         sharedPreference = new SharedPreference2();
 
         favorites = sharedPreference.getFavorites(context);
@@ -95,6 +146,7 @@ public class BookmarkList extends AppCompatActivity {
 
 
 
+        /* MobileAds.initialize(this, getString(R.string.admob_app_id));
         mAdView = new AdView(BookmarkList.this);
         mAdView.setAdSize(AdSize.BANNER);
 
@@ -102,35 +154,7 @@ public class BookmarkList extends AppCompatActivity {
         mAdView = (AdView) findViewById(R.id.adView);
 
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
-
-        mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-
-            }
-
-            @Override
-            public void onAdClosed() {
-
-            }
-
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-            }
-
-            @Override
-            public void onAdLeftApplication() {
-
-            }
-
-            @Override
-            public void onAdOpened() {
-                super.onAdOpened();
-            }
-        });
-
+        mAdView.loadAd(adRequest);*/
 
 
     }
